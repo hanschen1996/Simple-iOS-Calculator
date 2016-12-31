@@ -16,7 +16,7 @@ class LaunchScreenVC: UIViewController {
 class calculatorVC: UIViewController {
     
     var btnSound: AVAudioPlayer!  // audio may or may not exist
-    var runningNumber = ""
+    var runningNumber = "0"
     var leftValStr = ""
     var rightValStr = ""
     var result = ""
@@ -49,10 +49,22 @@ class calculatorVC: UIViewController {
         }
     }
     
+    @IBAction func clearPressed(_ sender: AnyObject) {
+        leftValStr = "";
+        rightValStr = "";
+        result = ""
+        runningNumber = "0";
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func numberPressed(sender: UIButton) { // drag this line to every number, so that whenever a number is pressed, it can call this function
         playSound()
         
-        runningNumber += "\(sender.tag)" // get which number is pressed
+        if (runningNumber == "0") {
+            runningNumber = "\(sender.tag)"
+        } else {
+            runningNumber += "\(sender.tag)" // get which number is pressed
+        }
         outputLabel.text = runningNumber // display the number
     }
     
