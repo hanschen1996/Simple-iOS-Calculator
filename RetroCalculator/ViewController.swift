@@ -16,10 +16,6 @@ class LaunchScreenVC: UIViewController {
 class calculatorVC: UIViewController {
     
     var btnSound: AVAudioPlayer!  // audio may or may not exist
-    var runningNumber = "0"
-    var leftValStr = ""
-    var rightValStr = ""
-    var result = ""
     
     @IBOutlet weak var outputLabel: UILabel!
     
@@ -32,6 +28,10 @@ class calculatorVC: UIViewController {
         case Empty = "Empty"
     }
     
+    var runningNumber = "0"
+    var leftValStr = ""
+    var rightValStr = ""
+    var result = ""
     var currentOperation = Operation.Empty
     
     override func viewDidLoad() {
@@ -49,12 +49,12 @@ class calculatorVC: UIViewController {
         }
     }
     
-    @IBAction func clearPressed(_ sender: AnyObject) {
+    @IBAction func clearPressed(sender: AnyObject) {
         leftValStr = "";
         rightValStr = "";
         result = ""
         runningNumber = "0";
-        dismiss(animated: true, completion: nil)
+        currentOperation = Operation.Empty
     }
     
     @IBAction func numberPressed(sender: UIButton) { // drag this line to every number, so that whenever a number is pressed, it can call this function
@@ -62,7 +62,13 @@ class calculatorVC: UIViewController {
         
         if (runningNumber == "0") {
             runningNumber = "\(sender.tag)"
-        } else {
+        } else if (runningNumber == "" && currentOperation == Operation.Equal) {
+            leftValStr = ""
+            runningNumber = "\(sender.tag)"
+            rightValStr = ""
+            result = ""
+            currentOperation = Operation.Empty
+            } else {
             runningNumber += "\(sender.tag)" // get which number is pressed
         }
         outputLabel.text = runningNumber // display the number

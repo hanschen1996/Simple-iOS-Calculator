@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yWp-t2-ahi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,78 +14,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Launch ScreenVC-->
-        <scene sceneID="kGk-cW-TeF">
-            <objects>
-                <viewController id="yWp-t2-ahi" customClass="LaunchScreenVC" customModule="RetroCalculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cNi-6t-7qc"/>
-                        <viewControllerLayoutGuide type="bottom" id="k0Z-5k-fP6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LVe-Vv-WaN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchbg" translatesAutoresizingMaskIntoConstraints="NO" id="a2b-OG-6hu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchground" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-gD-hnB">
-                                <rect key="frame" x="0.0" y="505" width="320" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="rNf-1z-v0h"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robot" translatesAutoresizingMaskIntoConstraints="NO" id="mvX-jU-WVJ">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="LlD-fU-RI1"/>
-                                    <constraint firstAttribute="height" constant="128" id="fZF-2h-k4K"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retro-Calc" translatesAutoresizingMaskIntoConstraints="NO" id="uEV-Gi-hcg">
-                                <rect key="frame" x="40" y="162" width="240" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="Afy-R0-dL4"/>
-                                    <constraint firstAttribute="width" constant="240" id="lDZ-xG-gB4"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZJ-VB-E0I">
-                                <rect key="frame" x="40" y="356" width="240" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="3BR-7M-Tek"/>
-                                    <constraint firstAttribute="width" constant="240" id="JdT-8B-vl3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
-                                <state key="normal" title="Tap here to start!">
-                                    <color key="titleColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="nmE-i8-iwy"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="uEV-Gi-hcg" firstAttribute="centerX" secondItem="LVe-Vv-WaN" secondAttribute="centerX" id="1wG-W3-VHO"/>
-                            <constraint firstItem="QZJ-VB-E0I" firstAttribute="top" secondItem="mvX-jU-WVJ" secondAttribute="bottom" constant="8" id="2BR-Xj-ZSs"/>
-                            <constraint firstItem="k0Z-5k-fP6" firstAttribute="top" secondItem="a2b-OG-6hu" secondAttribute="bottom" id="6yA-uQ-NW2"/>
-                            <constraint firstItem="a2m-gD-hnB" firstAttribute="leading" secondItem="LVe-Vv-WaN" secondAttribute="leading" id="Epe-RI-lnF"/>
-                            <constraint firstItem="a2b-OG-6hu" firstAttribute="top" secondItem="LVe-Vv-WaN" secondAttribute="top" id="HN9-0f-5Nw"/>
-                            <constraint firstItem="mvX-jU-WVJ" firstAttribute="centerY" secondItem="LVe-Vv-WaN" secondAttribute="centerY" id="JEN-Am-rTE"/>
-                            <constraint firstItem="k0Z-5k-fP6" firstAttribute="top" secondItem="a2m-gD-hnB" secondAttribute="bottom" id="Kq5-dQ-iaI"/>
-                            <constraint firstAttribute="trailing" secondItem="a2b-OG-6hu" secondAttribute="trailing" id="REB-nC-P9m"/>
-                            <constraint firstItem="QZJ-VB-E0I" firstAttribute="centerX" secondItem="LVe-Vv-WaN" secondAttribute="centerX" id="dpC-3o-X50"/>
-                            <constraint firstItem="a2b-OG-6hu" firstAttribute="leading" secondItem="LVe-Vv-WaN" secondAttribute="leading" id="fcm-T6-ikp"/>
-                            <constraint firstAttribute="trailing" secondItem="a2m-gD-hnB" secondAttribute="trailing" id="fjq-no-bd0"/>
-                            <constraint firstItem="mvX-jU-WVJ" firstAttribute="centerX" secondItem="LVe-Vv-WaN" secondAttribute="centerX" id="iYy-st-p5B"/>
-                            <constraint firstItem="mvX-jU-WVJ" firstAttribute="top" secondItem="uEV-Gi-hcg" secondAttribute="bottom" constant="20" id="weA-Rh-RKl"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="za5-Mw-xyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1333.125" y="-25"/>
-        </scene>
         <!--CalculatorVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -321,7 +249,7 @@
                                         </constraints>
                                         <state key="normal" title="Button" image="clear"/>
                                         <connections>
-                                            <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rtO-V0-cw0"/>
+                                            <action selector="clearPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gsf-1j-CCa"/>
                                             <action selector="numberPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fEi-Xg-Hog"/>
                                         </connections>
                                     </button>
@@ -377,7 +305,6 @@
         <image name="7" width="111" height="114"/>
         <image name="8" width="111" height="114"/>
         <image name="9" width="111" height="114"/>
-        <image name="Retro-Calc" width="755" height="111"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
         <image name="clear" width="333" height="114"/>
@@ -385,10 +312,7 @@
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
         <image name="ground" width="888" height="72"/>
-        <image name="launchbg" width="1433" height="957"/>
-        <image name="launchground" width="999" height="225"/>
         <image name="multiply" width="111" height="114"/>
-        <image name="robot" width="786" height="402"/>
         <image name="space-bg" width="988" height="946"/>
         <image name="subtract" width="111" height="114"/>
     </resources>
